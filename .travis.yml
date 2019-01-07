@@ -1,27 +1,30 @@
 language: elixir
 dist: xenial
 elixir:
-  - 1.7.4
+- 1.7.4
 otp_release:
-  - 21.1.1
+- 21.1
 branches:
   only:
-    - master
+  - master
 install:
-  - mix local.hex --force
-  - mix local.rebar --force
+- mix local.hex --force
+- mix local.rebar --force
 env:
-  - MIX_ENV=test
+- MIX_ENV=test
 before_script: make travis-init
 script: make travis
 before_deploy: make travis-deploy
 deploy:
+  matrix:
   - provider: releases
     skip_cleanup: true
     api_key:
-      secure: vEKLlWmj+ke944iktfzRRCyqHZhLVbtlJdEihkR8qy4hnFd7B1aAI/t1iNxyZGTkRP7/1a76Iy2Saf4dmwUp3HNJMHN0VJ/22JhbwL3n23fNQIuni50XWRhQUXRFQmOxmVPmjhkznSXoF2TbeSu4m56XqILny69KMaVJiNL2qpkXDWq/kf4z3majt71ZUC7xSzNSNTZQ2xc1q/9yLqQoMgbo8XTPNDLy5bHqAQm8Giz4sgZqAyOOJSVycjnSKIrPv6BIFlTDE4J2ZyyR4boW+rj018TVQQ182AsXoBDBuk19kKjSeawK8uRteFF6BnLv9jufbK7/2QGRfbc0mOMgvZjjZiSyltGVaJOcvb+WVIhuNaFXo2wZBR/63MgWZQhNO/IZseOWDmrKMUySJDZfSCpGCkweX5FaeRTlhXPyqTfEraYcnsn5CKNpYopvX/W8aUiM4ZOXI1dYEKUW7XsSqahAa4/mQFnL0zFf75MZqDUKGIDGk/bSwZge/nVXYJYjbssqMp+G8f0wyTygwV1VVbn5W7N5VvbGkVIwR/RqYnvNBwyF0vlBreRxiFwTsxy6jh4Sk3O3GClzbcZ5K6Mh4VJDurGvkbqzljX77HTs0t/YIIa2vsX9BpOFRT/EmJU/OwmSRL6dsgHHiJN3gZFR7L9Y9IRD5VGTs0+DyThGhkk=
+      secure: 
     file_glob: true
     file: src/_build/releases/*
     on:
       repo: ArcBlock/mix-deps
       branch: master
+  api_key:
+    secure: QuB33eXaOKWSOYkc3PAa3zqE/VKjxWmw5s/Mh6kizm5LViZRgOLWWYbLn2taClKRWxga9nt1b96EDWXECSJVl4VziXujX/no3hFrVL8RP5vxO339ARFWOkQsVOzn6GF81qj5IHIikjjEz2xYJmcgVyxCFNUGWTHCR3FGCAp/XBZ/VFcf61WS8owIUDv3QMKsYj6HiEeU7zApwWh2UivtiwZs1V9mtwCl5HQ7xmHMD1jRLs8SpnV99AExp3f639eqqAwJWggwYqnQtjf0s6mhIo10xyv+0QO4Fsyi2IgT2zbIqpGT/AlH5eVZKlsXbr/ks6bxaNd30UyKwzvWZXBns4djCmy1LnStn28sxeqBiQR1uf/FhbdEIKngBOfGVW+Who47mKvvMgpr/nVyl0iD32v8In1VT/6mwSWR/lYevONwGje7mAw/wIEOymFwVXk8xVh+Bv1iYq7/2SAJuRj4WojHyAEg1p6r5OkIsUtHXsyBmu5IIaChDIxvkTH/wuYXYFaQZFCXuy2zOb9ybxKxmYYsvhsLz/Qw0ZP+xL3vGbmkFySIG44b0guZ4OmtHfmOTv8+fTVOJ0n+0YBahXgnhmGpdjRZkJO8r4feSfC9ueVzpgtt5CPy/TEZ2PwfRcGaVBFeBKVQDGGJwGkD9rgPf0PYam9dZhg+djL665Aa33A=
