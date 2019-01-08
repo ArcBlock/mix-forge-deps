@@ -9,7 +9,7 @@ build:
 	@echo "Building the software..."
 	@cd src; mix compile
 
-travis-init:
+travis-init: extract-deps
 	@echo "Initialize software required for travis (normally ubuntu software)"
 
 travis: dep build

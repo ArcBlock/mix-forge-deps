@@ -1,3 +1,6 @@
+## 0.3.1 (January 07, 2019)
+  - Extract deps on itself
+
 ## 0.8.3 (November 30, 2018)
   - Clean up makefiles
   - Travis use MIX_ENV=test
