@@ -27,8 +27,7 @@ defmodule MixDeps.MixProject do
       {:con_cache, "~> 0.13"},
       {:connection, "~> 1.0"},
       {:deep_merge, "~> 0.1.1"},
-      {:erlexec, "~> 1.9"},
-      {:ex_abci, "~> 0.6"},
+      {:ex_abci, "~> 0.7"},
       {:grpc, "~> 0.3"},
       {:httpoison, "~> 1.5"},
       {:jason, "~> 1.1"},
@@ -36,15 +35,6 @@ defmodule MixDeps.MixProject do
       {:phoenix_pubsub, "~> 1.1"},
       {:toml, "~> 0.5"},
       {:typed_struct, "~> 0.1.4"},
-
-      # cover app
-      {:phoenix, "~> 1.4"},
-      {:phoenix_html, "~> 2.6.0", override: true},
-      {:phoenix_live_reload, "~> 1.2", only: :dev},
-      {:drab, "~> 0.10"},
-      {:earmark, "~> 1.3"},
-      {:gettext, "~> 0.11"},
-      {:plug_cowboy, "~> 2.0", override: true},
 
       # forge sdk
       {:google_protos, "~> 0.1"},
