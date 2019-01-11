@@ -51,6 +51,19 @@ defmodule MixDeps.MixProject do
       {:timex, "~> 3.0"},
       {:yaml_elixir, "~> 2.1"},
 
+      # pheonix and other
+
+      # phoenix
+      {:phoenix, "~> 1.4"},
+      {:phoenix_html, "~> 2.6.0", override: true},
+      {:phoenix_live_reload, "~> 1.2", only: :dev},
+
+      # Other dependency
+      {:drab, "~> 0.10"},
+      {:earmark, "~> 1.3"},
+      {:gettext, "~> 0.11"},
+      {:plug_cowboy, "~> 2.0", override: true},
+
       # dev & test
       {:benchee, "~> 0.13", only: :dev},
       {:benchee_html, "~> 0.4", only: :dev},
@@ -58,6 +71,7 @@ defmodule MixDeps.MixProject do
       {:dialyxir, "~> 1.0.0-rc.4", only: [:dev, :integration], runtime: false},
       {:ex_doc, "~> 0.19.0", only: [:dev, :test], runtime: false},
       {:excoveralls, "~> 0.10", only: [:test, :integration]},
+      {:faker, "~> 0.11", only: [:dev, :test]},
       {:mock, "~> 0.3.0", only: [:dev, :test, :integration]},
       {:pre_commit_hook, "~> 1.2", only: [:dev, :test], runtime: false},
       {:stream_data, "~> 0.4", only: [:test, :integration]},
