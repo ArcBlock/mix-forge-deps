@@ -27,6 +27,7 @@ defmodule MixDeps.MixProject do
       {:con_cache, "~> 0.13"},
       {:connection, "~> 1.0"},
       {:deep_merge, "~> 0.1.1"},
+      {:erlexec, "~> 1.9"},
       {:ex_abci, "~> 0.7"},
       {:grpc, "~> 0.3"},
       {:httpoison, "~> 1.5"},
@@ -55,7 +56,7 @@ defmodule MixDeps.MixProject do
 
       # phoenix
       {:phoenix, "~> 1.4"},
-      {:phoenix_html, "~> 2.6.0", override: true},
+      {:phoenix_html, "~> 2.13"},
       {:phoenix_live_reload, "~> 1.2", only: :dev},
 
       # Other dependency

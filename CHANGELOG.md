@@ -1,3 +1,6 @@
+## 0.3.3 (January 11, 2019)
+  - Update deps
+
 ## 0.3.1 (January 07, 2019)
   - Extract deps on itself
 
