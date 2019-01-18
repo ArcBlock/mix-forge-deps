@@ -1,0 +1,22 @@
+docs
+tools
+# Git data
+.git
+Dockerfile
+
+# Elixir build artifacts
+src/_build
+src/deps
+# Don't ignore the directory where our releases get built
+#!_build/prod/rel
+//src/deps
+
+# Node build artifacts
+src/assets/node_modules
+*/node_modules
+
+# Tests
+src/test
+
+# Compiled static artifacts
+src/priv/static
