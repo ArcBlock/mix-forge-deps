@@ -29,6 +29,7 @@ defmodule MixDeps.MixProject do
       {:deep_merge, "~> 0.1.1"},
       {:erlexec, "~> 1.9"},
       {:ex_abci, "~> 0.7"},
+      {:geolix, "~> 0.17"},
       {:grpc, "~> 0.3"},
       {:httpoison, "~> 1.5"},
       {:jason, "~> 1.1"},
@@ -59,11 +60,24 @@ defmodule MixDeps.MixProject do
       {:phoenix_html, "~> 2.13"},
       {:phoenix_live_reload, "~> 1.2", only: :dev},
 
+      # absinthe
+      {:absinthe, "~> 1.4"},
+      {:absinthe_phoenix, "~> 1.4"},
+      {:absinthe_plug, "~> 1.4"},
+
+      # goldorin
+      {:goldorin, "~> 0.37"},
+
+      # other dependencies
+      {:cors_plug, "~> 2.0"},
+      {:cowboy, "~> 2.5"},
+      {:drab, "~> 0.10.1"},
+      {:gettext, "~> 0.16"},
+      {:plug, "~> 1.7"},
+      {:plug_cowboy, "~> 2.0"},
+
       # Other dependency
-      {:drab, "~> 0.10"},
       {:earmark, "~> 1.3"},
-      {:gettext, "~> 0.11"},
-      {:plug_cowboy, "~> 2.0", override: true},
 
       # dev & test
       {:benchee, "~> 0.13", only: :dev},
