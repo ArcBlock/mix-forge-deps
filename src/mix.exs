@@ -28,7 +28,7 @@ defmodule MixDeps.MixProject do
       {:connection, "~> 1.0"},
       {:deep_merge, "~> 0.1.1"},
       {:erlexec, "~> 1.9"},
-      {:ex_abci, "~> 0.7"},
+      {:ex_abci, "~> 0.7.5"},
       {:geolix, "~> 0.17"},
       {:grpc, "~> 0.3"},
       {:httpoison, "~> 1.5"},

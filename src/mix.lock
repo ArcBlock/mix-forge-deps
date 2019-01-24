@@ -79,7 +79,7 @@
   "protobuf": {:hex, :protobuf, "0.5.4", "2e1b8eec211aff034ad8a14e3674220b0158bfb9a3c7128ac9d2a1ed1b3724d3", [:mix], [], "hexpm"},
   "ranch": {:hex, :ranch, "1.6.2", "6db93c78f411ee033dbb18ba8234c5574883acb9a75af0fb90a9b82ea46afa00", [:rebar3], [], "hexpm"},
   "recase": {:hex, :recase, "0.4.0", "8fb52846f75948156385af2dfdc12f69e5ce27b022a9d1682c70a2fb3ed149c7", [:mix], [], "hexpm"},
-  "rocksdb": {:hex, :rocksdb, "0.26.1", "bb73636e3572a2f66523c06465d8e7aa70620e8d4039c6f2f628056e6d5787bb", [:rebar3], [], "hexpm"},
+  "rocksdb": {:hex, :rocksdb, "0.26.2", "73339994d2f0d983e610f04d574d0b2c22b8a6ee5b166ac8308b29b1e5ff61dd", [:rebar3], [], "hexpm"},
   "slugger": {:hex, :slugger, "0.3.0", "efc667ab99eee19a48913ccf3d038b1fb9f165fa4fbf093be898b8099e61b6ed", [:mix], [], "hexpm"},
   "ssl_verify_fun": {:hex, :ssl_verify_fun, "1.1.4", "f0eafff810d2041e93f915ef59899c923f4568f4585904d010387ed74988e77b", [:make, :mix, :rebar3], [], "hexpm"},
   "stream_data": {:hex, :stream_data, "0.4.2", "fa86b78c88ec4eaa482c0891350fcc23f19a79059a687760ddcf8680aac2799b", [:mix], [], "hexpm"},
