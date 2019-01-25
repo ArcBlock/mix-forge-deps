@@ -1,3 +1,6 @@
+## 0.3.5 (January 24, 2019)
+  - Update dep.mk
+
 ## 0.3.3 (January 11, 2019)
   - Update deps
 
