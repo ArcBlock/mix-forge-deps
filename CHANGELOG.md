@@ -1,3 +1,6 @@
+## 0.3.8 (January 29, 2019)
+  - update mix.lock
+
 ## 0.3.7 (January 29, 2019)
   - support lqueue.
   -
