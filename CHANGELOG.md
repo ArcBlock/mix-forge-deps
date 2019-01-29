@@ -1,3 +1,6 @@
+## 0.3.6 (January 29, 2019)
+  - support mcrypto.
+
 ## 0.3.5 (January 24, 2019)
   - Update dep.mk
 

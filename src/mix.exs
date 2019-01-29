@@ -43,6 +43,7 @@ defmodule MixDeps.MixProject do
       {:keccakf1600, "~> 2.0", hex: :keccakf1600_orig},
       {:libdecaf, "~> 1.0"},
       {:libsecp256k1, "~> 0.1.3"},
+      {:mcrypto, "~> 0.1.0"},
       {:multibase, "~> 0.0.1"},
       {:recase, "~> 0.4"},
 
