@@ -33,6 +33,7 @@ defmodule MixDeps.MixProject do
       {:grpc, "~> 0.3"},
       {:httpoison, "~> 1.5"},
       {:jason, "~> 1.1"},
+      {:lqueue, "~> 1.1"},
       {:merkle_patricia_tree, github: "tyrchen/merkle_patricia_tree"},
       {:phoenix_pubsub, "~> 1.1"},
       {:toml, "~> 0.5"},

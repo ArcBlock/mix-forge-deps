@@ -1,3 +1,6 @@
+## 0.3.7 (January 29, 2019)
+  - support lqueue.
+  -
 ## 0.3.6 (January 29, 2019)
   - support mcrypto.
 
