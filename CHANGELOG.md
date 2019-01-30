@@ -1,3 +1,6 @@
+## 0.4.0 (January 30, 2019)
+  - Update to Elixir 1.8.0 otp 21.2.4
+
 ## 0.3.8 (January 29, 2019)
   - update mix.lock
 
