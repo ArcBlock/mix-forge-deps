@@ -1,3 +1,6 @@
+## 0.4.0 (January 31, 2019)
+  - Use rocksdb 1.0.0 and credo 1.0.1
+
 ## 0.4.0 (January 30, 2019)
   - Update to Elixir 1.8.0 otp 21.2.4
 
