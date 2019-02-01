@@ -1,3 +1,6 @@
+## 0.4.2 (Feb 01, 2019)
+  - update absinthe
+
 ## 0.4.0 (January 31, 2019)
   - Use rocksdb 1.0.0 and credo 1.0.1
 
