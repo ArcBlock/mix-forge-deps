@@ -1,3 +1,6 @@
+## 0.4.3 (Feb 04, 2019)
+  - update erlex, credo, excoveralls
+
 ## 0.4.2 (Feb 01, 2019)
   - update absinthe
 
