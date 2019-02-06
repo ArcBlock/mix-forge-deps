@@ -1,3 +1,6 @@
+## 0.4.4 (Feb 06, 2019)
+  - update ex_abci
+
 ## 0.4.3 (Feb 04, 2019)
   - update erlex, credo, excoveralls
 
