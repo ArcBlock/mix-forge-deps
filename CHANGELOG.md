@@ -1,3 +1,6 @@
+## 0.4.5 (Feb 08, 2019)
+  - update dynamic_module and goldorin
+
 ## 0.4.4 (Feb 06, 2019)
   - update ex_abci
 

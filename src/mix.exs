@@ -69,7 +69,7 @@ defmodule MixDeps.MixProject do
       {:absinthe_plug, "~> 1.4"},
 
       # goldorin
-      {:goldorin, "~> 0.37"},
+      {:goldorin, "~> 0.38"},
 
       # other dependencies
       {:cors_plug, "~> 2.0"},
