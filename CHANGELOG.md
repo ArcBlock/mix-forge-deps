@@ -1,3 +1,6 @@
+## 0.4.6 (Feb 10, 2019)
+  - update plug
+
 ## 0.4.5 (Feb 08, 2019)
   - update dynamic_module and goldorin
 
