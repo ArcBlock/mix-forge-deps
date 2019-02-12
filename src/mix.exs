@@ -69,7 +69,11 @@ defmodule MixDeps.MixProject do
       {:absinthe_plug, "~> 1.4"},
 
       # goldorin
-      {:goldorin, "~> 0.38"},
+      {:goldorin, "~> 0.39"},
+
+      # forge indexer dep
+      {:ecto, "~> 2.2", override: true},
+      {:sqlite_ecto2, "~> 2.2"},
 
       # other dependencies
       {:cors_plug, "~> 2.0"},

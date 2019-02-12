@@ -1,3 +1,6 @@
+## 0.5.0 (Feb 12, 2019)
+  - use ecto 2.2, sqlite_ecto2 and goldorin 0.39
+
 ## 0.4.6 (Feb 10, 2019)
   - update plug
 
