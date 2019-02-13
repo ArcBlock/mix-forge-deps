@@ -1,3 +1,6 @@
+## 0.5.2 (Feb 12, 2019)
+  - lock phoenix to 1.4.0.
+
 ## 0.5.1 (Feb 12, 2019)
   - add snappy.
 

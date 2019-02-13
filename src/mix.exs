@@ -60,7 +60,7 @@ defmodule MixDeps.MixProject do
       # pheonix and other
 
       # phoenix
-      {:phoenix, "~> 1.4"},
+      {:phoenix, "1.4.0"},
       {:phoenix_html, "~> 2.13"},
       {:phoenix_live_reload, "~> 1.2", only: :dev},
 
