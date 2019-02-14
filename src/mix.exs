@@ -46,7 +46,7 @@ defmodule MixDeps.MixProject do
       {:keccakf1600, "~> 2.0", hex: :keccakf1600_orig},
       {:libdecaf, "~> 1.0"},
       {:libsecp256k1, "~> 0.1.3"},
-      {:mcrypto, "~> 0.1.0"},
+      {:mcrypto, "~> 0.2"},
       {:multibase, "~> 0.0.1"},
       {:recase, "~> 0.4"},
 
@@ -95,7 +95,7 @@ defmodule MixDeps.MixProject do
       {:ex_doc, "~> 0.19.0", only: [:dev, :test], runtime: false},
       {:excoveralls, "~> 0.10", only: [:test, :integration]},
       {:faker, "~> 0.11", only: [:dev, :test]},
-      {:mock, "~> 0.3.0", only: [:dev, :test, :integration]},
+      {:mock, "~> 0.3", only: [:dev, :test, :integration]},
       {:pre_commit_hook, "~> 1.2", only: [:dev, :test], runtime: false},
       {:stream_data, "~> 0.4", only: [:test, :integration]},
 
