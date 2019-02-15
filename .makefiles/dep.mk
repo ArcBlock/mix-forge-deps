@@ -1,5 +1,5 @@
 SRC=src
-DEPS_VER=v0.5.2
+DEPS_VER=v0.5.3
 DEPS_PREFIX=https://github.com/ArcBlock/mix-forge-deps/releases/download
 BUILDS_FILE=builds.tgz
 DEPS_FILE=deps.tgz

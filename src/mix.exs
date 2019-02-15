@@ -26,6 +26,7 @@ defmodule MixDeps.MixProject do
     [
       {:con_cache, "~> 0.13"},
       {:connection, "~> 1.0"},
+      {:cipher, ">= 1.4.0"},
       {:deep_merge, "~> 0.1.1"},
       {:erlexec, "~> 1.9"},
       {:ex_abci_proto, "~> 0.7.6"},
@@ -40,6 +41,7 @@ defmodule MixDeps.MixProject do
       {:snappyer, "~> 1.2"},
       {:toml, "~> 0.5"},
       {:typed_struct, "~> 0.1.4"},
+      {:utility_belt, "~> 0.15"},
 
       # forge sdk
       {:google_protos, "~> 0.1"},
