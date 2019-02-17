@@ -1,3 +1,6 @@
+## 0.5.5 (Feb 17, 2019)
+  - upgrade decimal.
+
 ## 0.5.4 (Feb 15, 2019)
   - add utility belt.
 
