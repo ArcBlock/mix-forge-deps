@@ -1,3 +1,6 @@
+## 0.5.6 (Feb 17, 2019)
+  - upgrade ecto_sqlite2.
+
 ## 0.5.5 (Feb 17, 2019)
   - upgrade decimal.
 

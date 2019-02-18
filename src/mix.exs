@@ -76,7 +76,8 @@ defmodule MixDeps.MixProject do
 
       # forge indexer dep
       {:ecto, "~> 2.2", override: true},
-      {:sqlite_ecto2, "~> 2.2"},
+      # {:sqlite_ecto2, "~> 2.2"},
+      {:sqlite_ecto2, git: "https://github.com/tyrchen/sqlite_ecto2"},
 
       # other dependencies
       {:cors_plug, "~> 2.0"},
