@@ -89,6 +89,7 @@ defmodule MixDeps.MixProject do
 
       # Other dependency
       {:earmark, "~> 1.3"},
+      {:sentry, "~> 6.4"},
 
       # dev & test
       {:benchee, "~> 0.13", only: :dev},
