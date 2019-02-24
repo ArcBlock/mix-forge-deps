@@ -1,3 +1,6 @@
+## 0.5.8 (February 23, 2019)
+	- add logger file backend.
+
 ## 0.5.7 (Feb 18, 2019)
   - add sentry.
 

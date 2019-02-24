@@ -35,6 +35,7 @@ defmodule MixDeps.MixProject do
       {:grpc, "~> 0.3"},
       {:httpoison, "~> 1.5"},
       {:jason, "~> 1.1"},
+      {:logger_file_backend, git: "https://github.com/tyrchen/logger_file_backend"},
       {:lqueue, "~> 1.1"},
       {:merkle_patricia_tree, github: "tyrchen/merkle_patricia_tree"},
       {:phoenix_pubsub, "~> 1.1"},
