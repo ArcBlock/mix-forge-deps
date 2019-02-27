@@ -1,5 +1,8 @@
+## 0.5.9 (February 27, 2019)
+  - use latest deps.
+
 ## 0.5.8 (February 23, 2019)
-	- add logger file backend.
+  - add logger file backend.
 
 ## 0.5.7 (Feb 18, 2019)
   - add sentry.
