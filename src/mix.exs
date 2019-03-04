@@ -53,6 +53,13 @@ defmodule MixDeps.MixProject do
       {:multibase, "~> 0.0.1"},
       {:recase, "~> 0.4"},
 
+      # recon
+      {:extrace, "~> 0.1"},
+      {:recon, "~> 2.4"},
+
+      # time consuming statistics
+      {:statix, "~> 1.1"},
+
       # simulator
       {:nimble_parsec, "~> 0.5"},
       {:poolboy, "~> 1.5"},

@@ -1,3 +1,6 @@
+## 0.5.10 (March 4, 2019)
+  - use latest deps.
+
 ## 0.5.9 (February 27, 2019)
   - use latest deps.
 
