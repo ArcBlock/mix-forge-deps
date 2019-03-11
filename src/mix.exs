@@ -107,7 +107,7 @@ defmodule MixDeps.MixProject do
       {:ex_doc, "~> 0.19.0", only: [:dev, :test], runtime: false},
       {:excoveralls, "~> 0.10", only: [:test, :integration]},
       {:faker, "~> 0.11", only: [:dev, :test]},
-      {:mock, "~> 0.3", only: [:dev, :test, :integration]},
+      {:mock, "0.3.2", only: [:dev, :test, :integration]},
       {:pre_commit_hook, "~> 1.2", only: [:dev, :test], runtime: false},
       {:stream_data, "~> 0.4", only: [:test, :integration]},
 

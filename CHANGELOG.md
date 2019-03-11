@@ -1,3 +1,6 @@
+## 0.6.0 (March 11, 2019)
+  - update dep
+
 ## 0.5.11 (March 06, 2019)
   - use latest mcrypto
 
