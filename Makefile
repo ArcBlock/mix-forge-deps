@@ -17,4 +17,7 @@ travis: dep build
 travis-deploy: build-release release
 	@echo "Deploy the software by travis"
 
+travis-docker-centos:
+	docker build -t arcblock/forge-centos -f .docker/centos/Dockerfile .
+
 include .makefiles/*.mk
