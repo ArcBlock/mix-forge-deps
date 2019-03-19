@@ -6,7 +6,7 @@ UBUNTU=ubuntu-builds.tgz
 BUILDS_URL=$(DEPS_PREFIX)/$(DEPS_VER)
 
 extract-centos:
-	@cd $(SRC); wget $(BUILDS_URL)/$(CENTOS) --quiet; rm -rf _build/{dev,staging,test,prod}; rm -rf deps; tar zxf $(CENTOS)
+	@cd $(SRC); wget $(BUILDS_URL)/$(CENTOS) --quiet; rm -rf _build/{dev,staging,test,prod}; rm -rf deps; tar zxf $(CENTOS); rm *.tgz;
 
 extract-ubuntu:
-	@cd $(SRC); wget $(BUILDS_URL)/$(UBUNTU) --quiet; rm -rf _build/{dev,staging,test,prod}; rm -rf deps; tar zxf $(UBUNTU)
+	@cd $(SRC); wget $(BUILDS_URL)/$(UBUNTU) --quiet; rm -rf _build/{dev,staging,test,prod};  rm -rf deps; tar zxf $(UBUNTU); rm *.tgz;
