@@ -19,7 +19,7 @@ build-ubuntu: $(RELEASE_DIR) build-all build-version-file
 	@mv $(SRC)/builds.tgz $(RELEASE_DIR)/ubuntu-builds.tgz
 
 build-centos: $(RELEASE_DIR) build-all build-version-file
-	mv /tmp/builds.tgz $(SRC)/centos-builds.tgz
+	mv $(SRC)/builds.tgz $(RELEASE_DIR)/centos-builds.tgz
 
 build-version-file:
 	@echo "$(BUILD_VERSION)" > $(RELEASE_DIR)/$(BUILD_VERSION)
