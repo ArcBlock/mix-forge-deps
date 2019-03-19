@@ -1,3 +1,6 @@
+## 0.6.1 (March 18, 2019)
+  - support centos artifacts
+
 ## 0.6.0 (March 11, 2019)
   - update dep
 

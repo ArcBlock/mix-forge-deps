@@ -13,14 +13,17 @@ build-all:
 	@cd $(SRC); MIX_ENV=dev mix compile
 	@echo "Building dependencies for MIX_ENV=test..."
 	@cd $(SRC); MIX_ENV=test mix compile
-	@cd $(SRC); tar zcf builds.tgz _build/
-	@cd $(SRC); tar zcf deps.tgz deps/
-	@mv $(SRC)/*.tgz $(RELEASE_DIR)
+	@cd $(SRC); tar zcf builds.tgz _build/{prod,staging,dev,test} deps/
+
+build-ubuntu: $(RELEASE_DIR) build-all build-version-file
+	@mv $(SRC)/builds.tgz $(RELEASE_DIR)/ubuntu-builds.tgz
+
+build-centos: $(RELEASE_DIR) build-all build-version-file
+	mv $(SRC)/builds.tgz $(RELEASE_DIR)/centos-builds.tgz
 
 build-version-file:
 	@echo "$(BUILD_VERSION)" > $(RELEASE_DIR)/$(BUILD_VERSION)
 
+
 $(RELEASE_DIR):
 	@mkdir -p $@
-
-build-release: $(RELEASE_DIR) build-all build-version-file

@@ -1,11 +1,12 @@
 SRC=src
-DEPS_VER=v0.5.11
+DEPS_VER=v0.6.0
 DEPS_PREFIX=https://github.com/ArcBlock/mix-forge-deps/releases/download
-BUILDS_FILE=builds.tgz
-DEPS_FILE=deps.tgz
-BUILDS_URL=$(DEPS_PREFIX)/$(DEPS_VER)/$(BUILDS_FILE)
-DEPS_URL=$(DEPS_PREFIX)/$(DEPS_VER)/$(DEPS_FILE)
+CENTOS=centos-builds.tgz
+UBUNTU=ubuntu-builds.tgz
+BUILDS_URL=$(DEPS_PREFIX)/$(DEPS_VER)
 
-extract-deps:
-	@echo "Extracting deps from mix-forge-deps repo $(DEPS_VER)..."
-	@cd $(SRC); wget $(BUILDS_URL) --quiet; wget $(DEPS_URL) --quiet; tar zxf $(BUILDS_FILE); tar zxf $(DEPS_FILE); rm $(BUILDS_FILE) $(DEPS_FILE);
+extract-centos:
+	@cd $(SRC); wget $(BUILDS_URL)/$(CENTOS) --quiet; rm -rf _build/{dev,staging,test,prod}; rm -rf deps; tar zxf $(CENTOS); rm *.tgz;
+
+extract-ubuntu:
+	@cd $(SRC); wget $(BUILDS_URL)/$(UBUNTU) --quiet; rm -rf _build/{dev,staging,test,prod};  rm -rf deps; tar zxf $(UBUNTU); rm *.tgz;
