@@ -1,5 +1,5 @@
 SRC=src
-DEPS_VER=v0.6.1
+DEPS_VER=v0.6.2
 DEPS_PREFIX=https://github.com/ArcBlock/mix-forge-deps/releases/download
 CENTOS=centos-builds.tgz
 UBUNTU=ubuntu-builds.tgz

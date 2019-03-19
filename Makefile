@@ -12,7 +12,7 @@ build:
 travis-init:
 	@echo "Initialize software required for travis"
 
-travis: travis-docker-ubuntu travis-docker-centos
+travis: travis-docker-centos travis-docker-ubuntu
 
 travis-deploy: release
 
