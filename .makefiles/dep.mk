@@ -5,12 +5,8 @@ CENTOS=centos-builds.tgz
 UBUNTU=ubuntu-builds.tgz
 BUILDS_URL=$(DEPS_PREFIX)/$(DEPS_VER)
 
-get-deps:
-	@echo "Extracting deps from mix-forge-deps repo $(DEPS_VER)..."
-	@cd $(SRC); wget $(BUILDS_URL)/$(CENTOS) --quiet; wget $(BUILDS_URL)/$(UBUNTU) --quiet; true
-
 extract-centos:
-	@cd $(SRC); rm -rf _build/{dev,staging,test,prod}; rm -rf deps; tar zxf $(CENTOS); true
+	@cd $(SRC); wget $(BUILDS_URL)/$(CENTOS) --quiet; rm -rf _build/{dev,staging,test,prod}; rm -rf deps; tar zxf $(CENTOS)
 
 extract-ubuntu:
-	@cd $(SRC); rm -rf _build/{dev,staging,test,prod}; rm -rf deps; tar zxf $(UBUNTU); true
+	@cd $(SRC); wget $(BUILDS_URL)/$(UBUNTU) --quiet; rm -rf _build/{dev,staging,test,prod}; rm -rf deps; tar zxf $(UBUNTU)

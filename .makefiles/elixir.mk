@@ -15,10 +15,10 @@ build-all:
 	@cd $(SRC); MIX_ENV=test mix compile
 	@cd $(SRC); tar zcf builds.tgz _build/ deps/
 
-build-ubuntu: build-all
+build-ubuntu: $(RELEASE_DIR) build-all build-version-file
 	mv $(SRC)/builds.tgz $(SRC)/ubuntu-builds.tgz
 
-build-centos: build-all
+build-centos: $(RELEASE_DIR) build-all build-version-file
 	mv $(SRC)/builds.tgz $(SRC)/centos-builds.tgz
 
 build-version-file:
@@ -27,5 +27,3 @@ build-version-file:
 
 $(RELEASE_DIR):
 	@mkdir -p $@
-
-build-release: $(RELEASE_DIR) build-all build-version-file
