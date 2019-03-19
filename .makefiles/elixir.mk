@@ -13,7 +13,7 @@ build-all:
 	@cd $(SRC); MIX_ENV=dev mix compile
 	@echo "Building dependencies for MIX_ENV=test..."
 	@cd $(SRC); MIX_ENV=test mix compile
-	@cd $(SRC); tar zcf builds.tgz _build/{prod,staging,dev,test} deps/
+	@cd $(SRC); tar zcf builds.tgz _build/ deps/
 
 build-ubuntu: $(RELEASE_DIR) build-all build-version-file
 	@mv $(SRC)/builds.tgz $(RELEASE_DIR)/ubuntu-builds.tgz

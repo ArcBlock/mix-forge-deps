@@ -1,3 +1,6 @@
+## 0.6.2 (March 18, 2019)
+  - fix travis
+
 ## 0.6.1 (March 18, 2019)
   - support centos artifacts
 

@@ -11,19 +11,19 @@ build:
 
 travis-init:
 	@echo "Initialize software required for travis"
-	@docker pull tchen/centos-elixir
-	@docker pull tchen/ubuntu-elixir
 
-travis: travis-docker-ubuntu travis-docker-centos release
+travis: travis-docker-ubuntu travis-docker-centos
+
+travis-deploy: release
 
 all-centos: dep build build-centos
 all-ubuntu: dep build build-ubuntu
 
 travis-docker-centos:
-	docker run -v $(PWD):/mnt/deps --rm -it tchen/centos-elixir /bin/bash -c "cd /mnt/deps && make extract-centos && make all-centos"
+	docker pull tchen/centos-elixir && docker run -v $(PWD):/mnt/deps --rm -it tchen/centos-elixir /bin/bash -c "cd /mnt/deps && make extract-centos && make all-centos"
 
 travis-docker-ubuntu:
-	docker run -v $(PWD):/mnt/deps --rm -it tchen/centos-elixir /bin/bash -c "cd /mnt/deps && make extract-ubuntu && make all-ubuntu"
+	docker pull tchen/ubuntu-elixir && docker run -v $(PWD):/mnt/deps --rm -it tchen/ubuntu-elixir /bin/bash -c "cd /mnt/deps && make extract-ubuntu && make all-ubuntu"
 
 
 
