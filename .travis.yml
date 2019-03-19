@@ -1,22 +1,12 @@
 language: elixir
 dist: xenial
-elixir:
-- 1.8.0
-otp_release:
-- 21.2.4
-branches:
-  only:
-  - master
-before_install:
-  - sudo apt-get install -y  libstdc++6 inotify-tools wget binutils
-install:
-- mix local.hex --force
-- mix local.rebar --force
-env:
-- MIX_ENV=test
-before_script: make travis-init
+services:
+  - docker
+before_script:
+  - make travis-init
+  - docker pull tchen/centos-elixir
+  - docker pull tchen/ubuntu-elixir
 script: make travis
-before_deploy: make travis-deploy
 deploy:
   provider: releases
   skip_cleanup: true

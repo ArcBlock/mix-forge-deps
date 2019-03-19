@@ -9,15 +9,19 @@ build:
 	@echo "Building the software..."
 	@cd src; mix compile
 
-travis-init: extract-deps
+travis-init: get-deps
 	@echo "Initialize software required for travis (normally ubuntu software)"
 
-travis: dep build
+travis: travis-docker-ubuntu travis-docker-centos release
 
-travis-deploy: build-release release
-	@echo "Deploy the software by travis"
+all: dep build build-release
 
 travis-docker-centos:
-	docker build -t arcblock/forge-centos -f .docker/centos/Dockerfile .
+	docker run -v $(PWD):/mnt/deps --rm -it tchen/centos-elixir /bin/bash -c "cd /mnt/deps && make extract-centos && make all"
+
+travis-docker-ubuntu:
+	docker run -v $(PWD):/mnt/deps --rm -it tchen/centos-elixir /bin/bash -c "cd /mnt/deps && make extract-ubuntu && make all"
+
+
 
 include .makefiles/*.mk
