@@ -1,5 +1,8 @@
-## 0.6.3 (March 19, 2019)
+## 0.6.4 (March 20, 2019)
+  - support darwin build
 
+## 0.6.3 (March 19, 2019)
+	- build new deps
 
 ## 0.6.2 (March 18, 2019)
   - fix travis
