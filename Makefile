@@ -14,6 +14,9 @@ travis-linux-init:
 
 travis-darwin-init:
 	@echo "Initialize software required for travis"
+	@brew install elixir
+	@mix local.hex --force
+	@mix local.rebar --force
 
 travis-linux: travis-docker-centos travis-docker-ubuntu
 
