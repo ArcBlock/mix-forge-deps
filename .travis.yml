@@ -18,6 +18,7 @@ before_deploy: make travis-deploy
 deploy:
   provider: releases
   skip_cleanup: true
+  tag_name: $(git describe --tags --exact-match)
   api_key:
     secure: QuB33eXaOKWSOYkc3PAa3zqE/VKjxWmw5s/Mh6kizm5LViZRgOLWWYbLn2taClKRWxga9nt1b96EDWXECSJVl4VziXujX/no3hFrVL8RP5vxO339ARFWOkQsVOzn6GF81qj5IHIikjjEz2xYJmcgVyxCFNUGWTHCR3FGCAp/XBZ/VFcf61WS8owIUDv3QMKsYj6HiEeU7zApwWh2UivtiwZs1V9mtwCl5HQ7xmHMD1jRLs8SpnV99AExp3f639eqqAwJWggwYqnQtjf0s6mhIo10xyv+0QO4Fsyi2IgT2zbIqpGT/AlH5eVZKlsXbr/ks6bxaNd30UyKwzvWZXBns4djCmy1LnStn28sxeqBiQR1uf/FhbdEIKngBOfGVW+Who47mKvvMgpr/nVyl0iD32v8In1VT/6mwSWR/lYevONwGje7mAw/wIEOymFwVXk8xVh+Bv1iYq7/2SAJuRj4WojHyAEg1p6r5OkIsUtHXsyBmu5IIaChDIxvkTH/wuYXYFaQZFCXuy2zOb9ybxKxmYYsvhsLz/Qw0ZP+xL3vGbmkFySIG44b0guZ4OmtHfmOTv8+fTVOJ0n+0YBahXgnhmGpdjRZkJO8r4feSfC9ueVzpgtt5CPy/TEZ2PwfRcGaVBFeBKVQDGGJwGkD9rgPf0PYam9dZhg+djL665Aa33A=
   file_glob: true

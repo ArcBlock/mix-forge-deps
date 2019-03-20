@@ -1,3 +1,6 @@
+## 0.6.5 (March 20, 2019)
+  - allow overwrite
+
 ## 0.6.4 (March 20, 2019)
   - support darwin build
 
