@@ -9,7 +9,10 @@ build:
 	@echo "Building the software..."
 	@cd src; mix compile
 
-travis-init:
+travis-linux-init:
+	@echo "Initialize software required for travis"
+
+travis-darwin-init:
 	@echo "Initialize software required for travis"
 
 travis-linux: travis-docker-centos travis-docker-ubuntu
