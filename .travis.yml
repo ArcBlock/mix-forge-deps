@@ -2,10 +2,12 @@ matrix:
   include:
     - os: linux
       dist: xenial
-    - os: linux
       services: docker
     - os: osx
       osx_image: xcode10.1
+      language: elixir
+      elixir: 1.8.1
+      otp_release: 21.2.4
 branches:
   only:
   - master
