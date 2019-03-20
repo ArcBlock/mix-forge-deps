@@ -5,8 +5,8 @@ matrix:
       services: docker
     - os: osx
       language: elixir
-      elixir: 1.8.1
-      otp_release: 21.2.4
+      elixir: 1.8
+      otp_release: 21
 branches:
   only:
   - master
