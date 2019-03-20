@@ -1,6 +1,3 @@
-os:
-  - linux
-  - osx
 matrix:
   include:
     - os: linux
@@ -12,9 +9,6 @@ matrix:
 branches:
   only:
   - master
-before_script:
-  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then make travis-darwin-init;  fi
-  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then make travis-linux-init; fi
 script:
   - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then make travis-darwin;  fi
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then make travis-linux; fi
