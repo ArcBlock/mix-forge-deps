@@ -6,7 +6,7 @@ matrix:
     - os: osx
       language: elixir
       elixir: 1.8
-      otp_release: 21
+      otp_release: 20
 branches:
   only:
   - master
