@@ -17,7 +17,7 @@ travis-darwin-init:
 
 travis-linux: travis-docker-centos travis-docker-ubuntu
 
-travis-dawrin: darwin-builds darwin
+travis-darwin: darwin-builds darwin
 
 travis-deploy: release
 
