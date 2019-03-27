@@ -1,3 +1,6 @@
+## 0.7.0 (March 27, 2019)
+  - bump rocksdb version
+
 ## 0.6.5 (March 20, 2019)
   - allow overwrite
 
