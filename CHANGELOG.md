@@ -1,3 +1,6 @@
+## 0.7.1 (March 31, 2019)
+
+
 ## 0.7.0 (March 27, 2019)
   - bump rocksdb version
 
