@@ -1,3 +1,6 @@
+## 0.8.2 (April 11, 2019)
+	- fix ubuntu issue
+
 ## 0.8.1 (April 11, 2019)
 	- bump version
 
