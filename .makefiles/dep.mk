@@ -1,5 +1,5 @@
 SRC=src
-DEPS_VER=v0.6.3
+DEPS_VER=v0.7.0
 DEPS_PREFIX=https://github.com/ArcBlock/mix-forge-deps/releases/download
 TARGETS=centos-builds ubuntu-builds darwin-builds
 BUILDS_URL=$(DEPS_PREFIX)/$(DEPS_VER)
