@@ -28,10 +28,10 @@ all-centos: dep build centos
 all-ubuntu: dep build ubuntu
 
 travis-docker-centos:
-	docker pull tchen/centos-elixir && docker run -v $(PWD):/mnt/deps --rm -it tchen/centos-elixir /bin/bash -c "cd /mnt/deps && make all-centos"
+	docker pull tchen/centos-elixir && docker run -v $(PWD):/mnt/deps --rm -it tchen/centos-elixir /bin/bash -c "cd /mnt/deps && make centos-builds && make all-centos"
 
 travis-docker-ubuntu:
-	docker pull tchen/ubuntu-elixir && docker run -v $(PWD):/mnt/deps --rm -it tchen/ubuntu-elixir /bin/bash -c "cd /mnt/deps && make ubuntu-builds && make all-ubuntu"
+	docker pull tchen/ubuntu-elixir && docker run -v $(PWD):/mnt/deps --rm -it tchen/ubuntu-elixir /bin/bash -c "cd /mnt/deps && make all-ubuntu"
 
 
 

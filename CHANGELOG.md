@@ -1,5 +1,8 @@
-## 0.8.0 (April 11, 2019)
+## 0.8.1 (April 11, 2019)
+	- bump version
 
+## 0.8.0 (April 11, 2019)
+	- build rocksdb with zstd support
 
 ## 0.7.2 (April 11, 2019)
   - bump sqlite version
