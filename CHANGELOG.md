@@ -1,3 +1,6 @@
+## 0.8.3 (April 11, 2019)
+	- fix darwin
+
 ## 0.8.2 (April 11, 2019)
 	- fix ubuntu issue
 

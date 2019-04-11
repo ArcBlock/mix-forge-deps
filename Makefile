@@ -20,7 +20,7 @@ travis-darwin-init:
 
 travis-linux: travis-docker-centos travis-docker-ubuntu
 
-travis-darwin: dep build darwin
+travis-darwin: darwin-builds dep build darwin
 
 travis-deploy: release
 
@@ -31,7 +31,7 @@ travis-docker-centos:
 	docker pull tchen/centos-elixir && docker run -v $(PWD):/mnt/deps --rm -it tchen/centos-elixir /bin/bash -c "cd /mnt/deps && make centos-builds && make all-centos"
 
 travis-docker-ubuntu:
-	docker pull tchen/ubuntu-elixir && docker run -v $(PWD):/mnt/deps --rm -it tchen/ubuntu-elixir /bin/bash -c "cd /mnt/deps && make centos-builds && rm -rf src/deps; make all-ubuntu"
+	docker pull tchen/ubuntu-elixir && docker run -v $(PWD):/mnt/deps --rm -it tchen/ubuntu-elixir /bin/bash -c "cd /mnt/deps && make centos-builds && make all-ubuntu"
 
 
 
