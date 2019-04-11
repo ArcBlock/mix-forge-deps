@@ -1,3 +1,6 @@
+## 0.8.0 (April 11, 2019)
+
+
 ## 0.7.2 (April 11, 2019)
   - bump sqlite version
 
