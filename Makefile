@@ -20,7 +20,7 @@ travis-darwin-init:
 
 travis-linux: travis-docker-centos travis-docker-ubuntu
 
-travis-darwin: darwin-builds darwin
+travis-darwin: build darwin
 
 travis-deploy: release
 
