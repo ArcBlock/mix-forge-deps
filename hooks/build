@@ -1,0 +1,3 @@
+#!/bin/sh
+docker build --build-arg ELIXIR_VER=$EX_VER  \
+-t $IMAGE_NAME .
