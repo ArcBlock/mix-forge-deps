@@ -29,8 +29,8 @@ defmodule MixDeps.MixProject do
       {:cipher, ">= 1.4.0"},
       {:deep_merge, "~> 0.1.1"},
       {:erlexec, "~> 1.9"},
-      {:ex_abci_proto, "~> 0.7.6"},
-      {:ex_abci, "~> 0.7.6"},
+      {:ex_abci_proto, "~> 0.8"},
+      {:ex_abci, "~> 0.8"},
       {:geolix, "~> 0.17"},
       {:grpc, "~> 0.3"},
       {:httpoison, "~> 1.5"},
@@ -52,6 +52,7 @@ defmodule MixDeps.MixProject do
       {:mcrypto, "~> 0.2"},
       {:multibase, "~> 0.0.1"},
       {:recase, "~> 0.4"},
+      {:bloom_list, "~> 1.0"},
 
       # recon
       {:extrace, "~> 0.1"},
@@ -65,7 +66,7 @@ defmodule MixDeps.MixProject do
       {:poolboy, "~> 1.5"},
       {:slugger, "~> 0.3"},
       {:timex, "~> 3.0"},
-      {:yaml_elixir, "~> 2.1"},
+      {:yaml_elixir, "~> 2.2"},
 
       # pheonix and other
 
@@ -94,6 +95,7 @@ defmodule MixDeps.MixProject do
       {:gettext, "~> 0.16"},
       {:plug, "~> 1.7"},
       {:plug_cowboy, "~> 2.0"},
+      {:simple_bitmap, github: "tyrchen/simple_bitmap"},
 
       # Other dependency
       {:earmark, "~> 1.3"},
