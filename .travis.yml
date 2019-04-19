@@ -1,19 +1,19 @@
 matrix:
   include:
-    - os: linux
-      dist: xenial
-      services: docker
+    # - os: linux
+    #   dist: xenial
+    #   services: docker
     - os: osx
-      osx_image: xcode10.1
+      osx_image: xcode10.2
 branches:
   only:
   - master
 before_script:
-  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then make travis-darwin-init;  fi
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then make travis-linux-init; fi
+  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then make travis-darwin-init; fi
 script:
-  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then make travis-darwin;  fi
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then make travis-linux; fi
+  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then make travis-darwin; fi
 before_deploy: make travis-deploy
 deploy:
   provider: releases

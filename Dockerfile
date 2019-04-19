@@ -9,6 +9,3 @@ COPY .  .
 RUN mix local.hex --force && mix local.rebar --force 
 WORKDIR /src
 RUN mix deps.get && MIX_ENV=staging mix compile 
-
-
-
