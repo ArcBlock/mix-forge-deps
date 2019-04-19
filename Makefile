@@ -40,7 +40,7 @@ travis-darwin-fix-dep:
 	@rm /usr/local/lib/libgmp.dylib      # use static link for libsecp256k1/gmp
 	@rm /usr/local/lib/libzstd.dylib     # use static link for rocksdb/zstd
 
-travis-darwin: travis-darwin-fix-dep dep darwin
+travis-darwin: darwin-builds travis-darwin-fix-dep dep darwin
 
 # ------------------------------------------------------------------
 # travis deploy

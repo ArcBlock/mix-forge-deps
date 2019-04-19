@@ -1,8 +1,8 @@
 SRC=src
-DEPS_VER=v0.8.2
+DEPS_VER=v0.8.4
 DEPS_PREFIX=https://github.com/ArcBlock/mix-forge-deps/releases/download
 TARGETS=centos-builds ubuntu-builds darwin-builds
-BUILDS_URL=$(DEPS_PREFIX)/$(DEPS_VER)
 
 $(TARGETS):
-	@cd $(SRC); wget $(BUILDS_URL)/$@.tgz --quiet; rm -rf _build/{dev,staging,test,prod}; rm -rf deps; tar zxf $@.tgz; rm *.tgz || true
+	@echo "Extracting $@ deps from mix-forge-deps repo $(DEPS_VER)..."
+	@cd $(SRC); wget $(DEPS_PREFIX)/$(DEPS_VER)/$@.tgz; rm -rf _build/{staging,dev,test} deps; tar zxf $@.tgz; rm *.tgz || true
