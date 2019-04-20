@@ -13,11 +13,13 @@ dep:
 travis-linux-init:
 	@echo "Initialize software required for travis"
 
-travis-linux: travis-docker-centos travis-docker-ubuntu
+# travis-linux: travis-docker-centos travis-docker-ubuntu
 
-all-centos: dep build centos
+travis-linux: travis-docker-centos
 
-all-ubuntu: dep build ubuntu
+all-centos: dep centos
+
+all-ubuntu: dep ubuntu
 
 travis-docker-centos:
 	@docker pull tchen/centos-elixir && docker run -v $(PWD):/mnt/deps --rm -it tchen/centos-elixir /bin/bash -c "cd /mnt/deps && make centos-builds && make all-centos"

@@ -1,10 +1,10 @@
 matrix:
   include:
-    # - os: linux
-    #   dist: xenial
-    #   services: docker
-    - os: osx
-      osx_image: xcode10.2
+    - os: linux
+      dist: xenial
+      services: docker
+    # - os: osx
+    #   osx_image: xcode10.2
 branches:
   only:
   - master
