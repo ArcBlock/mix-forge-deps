@@ -14,9 +14,9 @@ travis-linux-init:
 	@echo "Initialize software required for travis"
 
 travis-centos-fix-dep:
-	@rm -f /usr/lib64/libgmp.so /usr/lib64/libgmp.a
+	@rm -f /usr/lib64/libgmp.so /usr/lib64/libgmp.a                         # use static link for libsecp256k1/gmp
 	@cp /mnt/home/src/priv/centos_libgmp.a /usr/lib64/libgmp.a
-	@rm -f /usr/local/lib/libzstd.so /usr/local/lib/libzstd.a
+	@rm -f /usr/local/lib/libzstd.so /usr/local/lib/libzstd.a               # use static link for rocksdb/zstd
 	@cp /mnt/home/src/priv/centos_libzstd.a /usr/local/lib/libzstd.a
 
 # travis-linux: travis-docker-centos travis-docker-ubuntu
