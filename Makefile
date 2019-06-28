@@ -24,8 +24,7 @@ travis-linux: travis-docker-centos
 all-centos: dep centos
 
 travis-docker-centos:
-	# @docker pull tchen/centos-elixir:1.9 && docker run -v $(PWD):/mnt/home --rm -it tchen/centos-elixir /bin/bash -c "cd /mnt/home && make centos-builds && make travis-centos-fix-dep && make all-centos"
-	@docker pull tchen/centos-elixir:1.9 && docker run -v $(PWD):/mnt/home --rm -it tchen/centos-elixir /bin/bash -c "cd /mnt/home && make travis-centos-fix-dep && make all-centos"
+	@docker pull tchen/centos-elixir:1.9 && docker run -v $(PWD):/mnt/home --rm -it tchen/centos-elixir /bin/bash -c "cd /mnt/home && make centos-builds && make travis-centos-fix-dep && make all-centos"
 
 # ------------------------------------------------------------------
 # travis darwin
@@ -42,8 +41,7 @@ travis-darwin-fix-dep:
 	@rm /usr/local/lib/libgmp.dylib      # use static link for libsecp256k1/gmp
 	@rm /usr/local/lib/libzstd.dylib     # use static link for rocksdb/zstd
 
-# travis-darwin: darwin-builds travis-darwin-fix-dep dep darwin
-travis-darwin: travis-darwin-fix-dep dep darwin
+travis-darwin: darwin-builds travis-darwin-fix-dep dep darwin
 
 # ------------------------------------------------------------------
 # travis deploy
