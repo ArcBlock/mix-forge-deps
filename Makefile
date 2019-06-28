@@ -19,19 +19,13 @@ travis-centos-fix-dep:
 	@rm -f /usr/local/lib/libzstd.so /usr/local/lib/libzstd.a               # use static link for rocksdb/zstd
 	@cp /mnt/home/src/priv/centos_libzstd.a /usr/local/lib/libzstd.a
 
-# travis-linux: travis-docker-centos travis-docker-ubuntu
-
 travis-linux: travis-docker-centos
 
 all-centos: dep centos
 
-all-ubuntu: dep ubuntu
-
 travis-docker-centos:
-	@docker pull tchen/centos-elixir && docker run -v $(PWD):/mnt/home --rm -it tchen/centos-elixir /bin/bash -c "cd /mnt/home && make centos-builds && make travis-centos-fix-dep && make all-centos"
-
-travis-docker-ubuntu:
-	@docker pull tchen/ubuntu-elixir && docker run -v $(PWD):/mnt/home --rm -it tchen/ubuntu-elixir /bin/bash -c "cd /mnt/home && make centos-builds && make all-ubuntu"
+	# @docker pull tchen/centos-elixir:1.9 && docker run -v $(PWD):/mnt/home --rm -it tchen/centos-elixir /bin/bash -c "cd /mnt/home && make centos-builds && make travis-centos-fix-dep && make all-centos"
+	@docker pull tchen/centos-elixir:1.9 && docker run -v $(PWD):/mnt/home --rm -it tchen/centos-elixir /bin/bash -c "cd /mnt/home && make travis-centos-fix-dep && make all-centos"
 
 # ------------------------------------------------------------------
 # travis darwin
@@ -39,8 +33,8 @@ travis-docker-ubuntu:
 
 travis-darwin-init:
 	@echo "Initialize software required for travis darwin"
-	@HOMEBREW_NO_AUTO_UPDATE=1 brew install https://raw.githubusercontent.com/Homebrew/homebrew-core/438814082094bdac172648b5efa03f2596d46f38/Formula/erlang.rb --ignore-dependencies # erlang 21.3.5
-	@HOMEBREW_NO_AUTO_UPDATE=1 brew install https://raw.githubusercontent.com/Homebrew/homebrew-core/c19ee54756997f56ea407d0817a8c33213b2e10b/Formula/elixir.rb --ignore-dependencies # elixir 1.8.1
+	@HOMEBREW_NO_AUTO_UPDATE=1 brew install https://raw.githubusercontent.com/Homebrew/homebrew-core/20fe974089abdb0f324dab2277658f82eaaac87a/Formula/erlang.rb --ignore-dependencies # erlang 22.0.4
+	@HOMEBREW_NO_AUTO_UPDATE=1 brew install https://raw.githubusercontent.com/Homebrew/homebrew-core/bacd78012c1023819dddc312ca35938914527290/Formula/elixir.rb --ignore-dependencies # elixir 1.9.0
 	@mix local.hex --force
 	@mix local.rebar --force
 
@@ -48,7 +42,8 @@ travis-darwin-fix-dep:
 	@rm /usr/local/lib/libgmp.dylib      # use static link for libsecp256k1/gmp
 	@rm /usr/local/lib/libzstd.dylib     # use static link for rocksdb/zstd
 
-travis-darwin: darwin-builds travis-darwin-fix-dep dep darwin
+# travis-darwin: darwin-builds travis-darwin-fix-dep dep darwin
+travis-darwin: travis-darwin-fix-dep dep darwin
 
 # ------------------------------------------------------------------
 # travis deploy

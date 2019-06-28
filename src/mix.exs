@@ -66,7 +66,7 @@ defmodule MixDeps.MixProject do
       {:poolboy, "~> 1.5"},
       {:slugger, "~> 0.3"},
       {:timex, "~> 3.0"},
-      {:yaml_elixir, "~> 2.2"},
+      {:yaml_elixir, "~> 2.4"},
 
       # pheonix and other
 
@@ -112,9 +112,6 @@ defmodule MixDeps.MixProject do
       {:mock, "0.3.2", only: [:dev, :test, :integration]},
       {:pre_commit_hook, "~> 1.2", only: [:dev, :test], runtime: false},
       {:stream_data, "~> 0.4", only: [:test, :integration]},
-
-      # deployment
-      {:distillery, "~> 2.0", runtime: false}
     ]
   end
 end

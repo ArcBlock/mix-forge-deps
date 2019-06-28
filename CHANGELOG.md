@@ -1,3 +1,9 @@
+## 0.10.0 (June 27, 2019)
+  - Update erlang/elixir version for darwin
+  - Update deps
+  - Update makefile
+  - Quite the wget
+
 ## 0.8.3 (April 11, 2019)
 	- fix darwin
 
