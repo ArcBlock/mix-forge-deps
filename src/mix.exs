@@ -39,7 +39,7 @@ defmodule MixDeps.MixProject do
       {:lqueue, "~> 1.1"},
       {:merkle_patricia_tree, github: "tyrchen/merkle_patricia_tree"},
       {:phoenix_pubsub, "~> 1.1"},
-      {:protobuf, "~> 0.5.3"},
+      {:protobuf, "~> 0.6"},
       {:toml, "~> 0.5"},
       {:typed_struct, "~> 0.1.4"},
       {:utility_belt, "~> 0.15"},

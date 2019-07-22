@@ -24,7 +24,7 @@ travis-linux: travis-docker-centos
 all-centos: dep centos
 
 travis-docker-centos:
-	@docker pull tchen/centos-elixir:1.9 && docker run -v $(PWD):/mnt/home --rm -it tchen/centos-elixir /bin/bash -c "cd /mnt/home && make centos-builds && make travis-centos-fix-dep && make all-centos"
+	@docker pull tchen/centos-elixir:1.9.1 && docker run -v $(PWD):/mnt/home --rm -it tchen/centos-elixir:1.9.1 /bin/bash -c "cd /mnt/home && make centos-builds && make travis-centos-fix-dep && make all-centos"
 
 # ------------------------------------------------------------------
 # travis darwin
@@ -32,8 +32,8 @@ travis-docker-centos:
 
 travis-darwin-init:
 	@echo "Initialize software required for travis darwin"
-	@HOMEBREW_NO_AUTO_UPDATE=1 brew install https://raw.githubusercontent.com/Homebrew/homebrew-core/20fe974089abdb0f324dab2277658f82eaaac87a/Formula/erlang.rb --ignore-dependencies # erlang 22.0.4
-	@HOMEBREW_NO_AUTO_UPDATE=1 brew install https://raw.githubusercontent.com/Homebrew/homebrew-core/bacd78012c1023819dddc312ca35938914527290/Formula/elixir.rb --ignore-dependencies # elixir 1.9.0
+	@HOMEBREW_NO_AUTO_UPDATE=1 brew install https://raw.githubusercontent.com/Homebrew/homebrew-core/d17df4af5f224ddc2aa56502b0fe75f3f7d253ce/Formula/erlang.rb --ignore-dependencies # erlang 22.0.7
+	@HOMEBREW_NO_AUTO_UPDATE=1 brew install https://raw.githubusercontent.com/Homebrew/homebrew-core/a6de24ba2fa7ce9ccd8a903a6422bf733a415866/Formula/elixir.rb --ignore-dependencies # elixir 1.9.1
 	@mix local.hex --force
 	@mix local.rebar --force
 

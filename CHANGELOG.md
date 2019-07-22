@@ -1,3 +1,10 @@
+## 0.10.1 (July 22, 2019)
+  - Update erlang version; update docker elixir version
+  - Update deps
+  - Upgrade elixir 1.9.1
+  - Fix type
+  - Update own dep version
+
 ## 0.10.0 (June 27, 2019)
   - Update erlang/elixir version for darwin
   - Update deps
