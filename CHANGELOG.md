@@ -1,3 +1,6 @@
+## 0.10.2 (October 17, 2019)
+  - Update deps
+
 ## 0.10.1 (July 22, 2019)
   - Update erlang version; update docker elixir version
   - Update deps

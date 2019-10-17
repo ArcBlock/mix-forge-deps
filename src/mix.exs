@@ -24,25 +24,29 @@ defmodule MixDeps.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
+      {:bbmustache, "~> 1.7"},
       {:con_cache, "~> 0.13"},
       {:connection, "~> 1.0"},
       {:cipher, ">= 1.4.0"},
-      {:deep_merge, "~> 0.1.1"},
+      {:deep_merge, "~> 0.2"},
       {:erlexec, "~> 1.9"},
-      {:ex_abci_proto, "~> 0.8"},
+      {:ex_abci_proto, "~> 0.9"},
       {:ex_abci, "~> 0.8"},
       {:geolix, "~> 0.17"},
       {:grpc, "~> 0.3"},
-      {:httpoison, "~> 1.5"},
+      {:httpoison, "~> 1.6"},
       {:jason, "~> 1.1"},
       {:logger_file_backend, git: "https://github.com/tyrchen/logger_file_backend"},
       {:lqueue, "~> 1.1"},
       {:merkle_patricia_tree, github: "tyrchen/merkle_patricia_tree"},
       {:phoenix_pubsub, "~> 1.1"},
+      {:postgrex, "~> 0.13.0", override: true},
       {:protobuf, "~> 0.6"},
-      {:toml, "~> 0.5"},
+      {:rule_parser, "~> 0.2"},
+      {:simplehttp, "~> 0.5.1", runtime: false},
+      {:toml, "~> 0.6"},
       {:typed_struct, "~> 0.1.4"},
-      {:utility_belt, "~> 0.15"},
+      {:utility_belt, "~> 0.16"},
 
       # forge sdk
       {:google_protos, "~> 0.1"},
@@ -51,7 +55,7 @@ defmodule MixDeps.MixProject do
       {:libsecp256k1, "~> 0.1.3"},
       {:mcrypto, "~> 0.2"},
       {:multibase, "~> 0.0.1"},
-      {:recase, "~> 0.4"},
+      {:recase, "~> 0.6"},
       {:bloom_list, "~> 1.0"},
 
       # recon
@@ -81,7 +85,7 @@ defmodule MixDeps.MixProject do
       {:absinthe_plug, "~> 1.4"},
 
       # goldorin
-      {:goldorin, "~> 0.39"},
+      {:goldorin, "~> 0.41"},
 
       # forge indexer dep
       {:ecto, "~> 2.2", override: true},
@@ -93,23 +97,23 @@ defmodule MixDeps.MixProject do
       {:cowboy, "~> 2.5"},
       {:drab, "~> 0.10.1"},
       {:gettext, "~> 0.16"},
-      {:plug, "~> 1.7"},
+      {:plug, "~> 1.8"},
       {:plug_cowboy, "~> 2.0"},
-      {:simple_bitmap, github: "tyrchen/simple_bitmap"},
+      {:simple_bitmap, "~> 1.4"},
 
       # Other dependency
-      {:earmark, "~> 1.3"},
+      {:earmark, "~> 1.4"},
       {:sentry, "~> 6.4"},
 
       # dev & test
       {:benchee, "~> 0.13", only: :dev},
       {:benchee_html, "~> 0.4", only: :dev},
       {:credo, "~> 1.0.0", only: [:dev, :test]},
-      {:dialyxir, "~> 1.0.0-rc.4", only: [:dev, :integration], runtime: false},
+      {:dialyxir, "~> 1.0.0-rc.7", only: [:dev, :integration], runtime: false},
       {:ex_doc, "~> 0.19.0", only: [:dev, :test], runtime: false},
-      {:excoveralls, "~> 0.10", only: [:test, :integration]},
+      {:excoveralls, "~> 0.11", only: [:test, :integration]},
       {:faker, "~> 0.11", only: [:dev, :test]},
-      {:mock, "0.3.2", only: [:dev, :test, :integration]},
+      {:mock, "~> 0.3", only: [:dev, :test, :integration]},
       {:pre_commit_hook, "~> 1.2", only: [:dev, :test], runtime: false},
       {:stream_data, "~> 0.4", only: [:test, :integration]},
     ]
